@@ -1,0 +1,6 @@
+{
+  "version": "0.9.1-beta.3",
+  "notes": "Local-first AI: metadata & take detection now run on-device (no API key needed). New folder-organization templates + first-run setup. Windows stability fixes. Built-in update checker.",
+  "mac_url": "https://drive.google.com/drive/folders/1JGh4fd8VJuBkXm1Szlo7IXYKrFhzblwe?usp=drive_link",
+  "win_url": "https://drive.google.com/drive/folders/1JGh4fd8VJuBkXm1Szlo7IXYKrFhzblwe?usp=drive_link"
+}
