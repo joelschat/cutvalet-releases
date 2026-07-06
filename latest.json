@@ -1,6 +1,6 @@
 {
-  "version": "0.9.1-beta.4",
-  "notes": "Guided interactive onboarding tour. Self-contained install (macOS + Windows) \u2014 ffmpeg, exiftool, Node and the Remotion graphics runtime are bundled, so graphics and every tool work offline with no setup. Crash-proofed the DaVinci Resolve connection; Resolve 21+ with IPC off the UI thread, auto-recovery and Resync. Local-first AI (on-device metadata & take detection; Claude API optional). Folder-organization templates + first-run setup wizard. Camera-RAW (BRAW/R3D) handling. Optional AI-model pre-download, drag-drop fixes, built-in update checker + anonymous telemetry.",
+  "version": "0.9.1-beta.5",
+  "notes": "NEW: Speed Ramp tool - build hold/ramp speed programs (up to 10000%) with Gentle/Standard/Sharp curves and presets that sync across your machines. AI Rough Cut: one window from brief to build (thumbnails, 10 styles, model picker, self-review), segment mode to extend the current timeline, music bed placement, and no more 1-frame black gaps. Rich analysis now returns a timestamped visual timeline per clip; tiers simplified to Basic and Rich. Camera proxies (BRAW/Sony) are analyzed automatically. Resolve sync self-heals when the wrong project is open. Models auto-unload after 5 idle minutes to give memory back to Resolve. UI: state colors everywhere (purple waiting / blue working / green done), reorganized tool tiles, per-project 'Reset ingest data'.",
   "mac_url": "https://drive.google.com/drive/folders/1JGh4fd8VJuBkXm1Szlo7IXYKrFhzblwe?usp=drive_link",
   "win_url": "https://drive.google.com/drive/folders/1JGh4fd8VJuBkXm1Szlo7IXYKrFhzblwe?usp=drive_link"
 }
