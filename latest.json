@@ -1,6 +1,8 @@
 {
   "version": "0.9.1-beta.6",
   "notes": "NEW: In-app self-update - one click downloads, swaps, and relaunches; auto-rollback if anything goes wrong. Much smaller downloads - the Node+Remotion graphics runtime (~563 MB) is no longer bundled (downloads once on first graphics use) and ~200 MB of unused libraries pruned. Multi-provider text AI - planner, metadata, and chat can run on Claude, OpenAI, Gemini, or a fully local Ollama; graphics also works on Ollama-only setups. NEW Clip Inspector - deep view of any clip (description, transcript, timeline events, QC signals) on Sources, Search & Import, and the sidecar. Audio waveform sync actually runs now; multicam track placement fixed (cameras no longer stack on V1). Organize: Group into Scenes; Artlist joins Epidemic Sound for music. Reliability: AI queues dedup, timelapse runs collapse to one job, no console-window flashing on Windows, API keys moved to the OS keychain, and the Windows build is Authenticode-signed.",
-  "mac_url": "https://drive.google.com/drive/folders/1JGh4fd8VJuBkXm1Szlo7IXYKrFhzblwe?usp=drive_link",
-  "win_url": "https://drive.google.com/drive/folders/1JGh4fd8VJuBkXm1Szlo7IXYKrFhzblwe?usp=drive_link"
+  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v0.9.1-beta.6/CutValet-0.9.1-beta.6-mac.zip",
+  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v0.9.1-beta.6/CutValet-0.9.1-beta.6-win.zip",
+  "mac_sha256": "77d58bda29f8eb62438ab0af5d6121eda65e818e832081ca0c9b41ce22cc9b24",
+  "win_sha256": "5e14de891b12c15844daf15fd85ca796584e9efa16096cd1fedb2b2e227bf2c2"
 }
