@@ -1,0 +1,102 @@
+<!-- Cut Valet — YouTube publishing setup (bring-your-own Google credentials).
+     Standalone fragment: paste anywhere. No framework, no external assets;
+     styles are scoped under .cv-ytsetup.
+     PUBLISH NOTE: the app links to this page via branding.YOUTUBE_SETUP_GUIDE_URL
+     (https://joelschat.github.io/cutvalet-releases/youtube-setup.html) — copy
+     this file into the cutvalet-releases Pages repo when it changes. -->
+<section class="cv-ytsetup">
+  <style>
+    .cv-ytsetup { max-width: 760px; margin: 0 auto; font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1c1e21; line-height: 1.55; }
+    .cv-ytsetup h2 { font-size: 1.6em; margin: 0 0 .25em; letter-spacing: -0.02em; }
+    .cv-ytsetup h3 { font-size: 1.05em; margin: 1.6em 0 .4em; }
+    .cv-ytsetup p.cv-lede { color: #555; margin-top: 0; }
+    .cv-ytsetup ol { margin: .3em 0 0; padding-left: 1.4em; }
+    .cv-ytsetup ol > li { margin: .45em 0; }
+    .cv-ytsetup ul { margin: .3em 0 0; padding-left: 1.2em; }
+    .cv-ytsetup code { background: #f0f1f3; border-radius: 4px; padding: .1em .35em; font-size: .92em; }
+    .cv-ytsetup .cv-note { font-size: .9em; color: #555; background: #f5f6f8; border-radius: 8px; padding: .8em 1em; margin-top: 1.2em; }
+    .cv-ytsetup .cv-warn { font-size: .9em; color: #6b5200; background: #fdf6e3; border-radius: 8px; padding: .8em 1em; margin-top: 1.2em; }
+    @media (prefers-color-scheme: dark) {
+      .cv-ytsetup { color: #e8eaed; }
+      .cv-ytsetup p.cv-lede, .cv-ytsetup .cv-note { color: #b6bac0; }
+      .cv-ytsetup .cv-note { background: #26282c; }
+      .cv-ytsetup .cv-warn { color: #e8d49a; background: #2e2a1c; }
+      .cv-ytsetup code { background: #26282c; }
+    }
+  </style>
+
+  <h2>Publishing to YouTube — one-time setup</h2>
+  <p class="cv-lede">Cut Valet uploads to <em>your</em> channel with
+  <em>your own</em> (free) Google credentials. There is no shared
+  "Cut Valet app" on Google's side — you create a tiny personal one in about
+  ten minutes, and your videos never pass through anyone else's account or
+  quota. You only do this once.</p>
+
+  <h3>1&nbsp;·&nbsp;Create a Google Cloud project</h3>
+  <ol>
+    <li>Go to <a href="https://console.cloud.google.com/">console.cloud.google.com</a>
+        and sign in with the Google account that owns your YouTube channel.</li>
+    <li>Click the project picker (top bar) → <strong>New project</strong>.
+        Name it anything — e.g. <code>cut-valet-uploads</code> — and create it.</li>
+  </ol>
+
+  <h3>2&nbsp;·&nbsp;Enable the YouTube Data API v3</h3>
+  <ol>
+    <li>With your new project selected, open
+        <strong>APIs &amp; Services → Library</strong>.</li>
+    <li>Search for <strong>YouTube Data API v3</strong> and click
+        <strong>Enable</strong>.</li>
+  </ol>
+
+  <h3>3&nbsp;·&nbsp;Set up the OAuth consent screen</h3>
+  <ol>
+    <li>Open <strong>APIs &amp; Services → OAuth consent screen</strong>.</li>
+    <li>Choose <strong>External</strong> (the only option without a Google
+        Workspace organisation) and fill in the two required fields: an app
+        name (e.g. "Cut Valet") and your email address.</li>
+    <li>You can skip scopes and branding — Cut Valet requests what it needs at
+        sign-in time.</li>
+    <li>Under <strong>Audience → Test users</strong>, add <em>your own</em>
+        Google account. For personal use that's all you need.</li>
+  </ol>
+
+  <div class="cv-warn"><strong>The 7-day sign-in caveat.</strong> While the
+  consent screen is in <em>Testing</em> mode, Google expires your saved
+  sign-in after 7 days — Cut Valet will pop the browser consent window again
+  each week. To make the sign-in permanent, go back to the OAuth consent
+  screen and click <strong>Publish app</strong> (to "In production"). You do
+  <em>not</em> need to complete Google's verification for a personal app:
+  the first sign-in after publishing shows a "Google hasn't verified this
+  app" warning — click <strong>Advanced → Go to (your app name)</strong>
+  once, and you're done. After that, tokens no longer expire weekly.</div>
+
+  <h3>4&nbsp;·&nbsp;Create the Desktop-app OAuth client</h3>
+  <ol>
+    <li>Open <strong>APIs &amp; Services → Credentials</strong> →
+        <strong>Create credentials → OAuth client ID</strong>.</li>
+    <li>Application type: <strong>Desktop app</strong>. Name it anything.</li>
+    <li>Click the <strong>download</strong> icon next to the new client and
+        save the JSON file.</li>
+  </ol>
+
+  <h3>5&nbsp;·&nbsp;Point Cut Valet at the file</h3>
+  <ol>
+    <li>Save the downloaded JSON to
+        <code>~/DVEA/config/youtube_credentials.json</code>
+        (on Windows: <code>C:\Users\&lt;you&gt;\DVEA\config\youtube_credentials.json</code>)
+        — or keep it anywhere and set the path in the app:
+        <strong>YouTube tool → Delivery settings → Credentials file</strong>.</li>
+    <li>Load an export in the YouTube tool and click
+        <strong>Upload to YouTube</strong>. Your browser opens Google's
+        consent screen once; after you approve, Cut Valet caches the sign-in
+        token and future uploads are hands-free.</li>
+  </ol>
+
+  <div class="cv-note"><strong>Quota &amp; privacy notes.</strong> Google
+  gives every project 10,000 API "units" per day; one upload costs about
+  1,600 — roughly six uploads a day, far more than a daily vlog needs. Your
+  credentials and token stay on your machine
+  (<code>~/DVEA/config/</code>) and are never sent anywhere except to
+  Google. Cut Valet requests only the YouTube upload/manage scopes it uses
+  for publishing, captions, and thumbnails.</div>
+</section>
