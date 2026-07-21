@@ -1,8 +1,8 @@
 {
-  "version": "0.9.1-beta.6",
-  "notes": "NEW: In-app self-update - one click downloads, swaps, and relaunches; auto-rollback if anything goes wrong. Much smaller downloads - the Node+Remotion graphics runtime (~563 MB) is no longer bundled (downloads once on first graphics use) and ~200 MB of unused libraries pruned. Multi-provider text AI - planner, metadata, and chat can run on Claude, OpenAI, Gemini, or a fully local Ollama; graphics also works on Ollama-only setups. NEW Clip Inspector - deep view of any clip (description, transcript, timeline events, QC signals) on Sources, Search & Import, and the sidecar. Audio waveform sync actually runs now; multicam track placement fixed (cameras no longer stack on V1). Organize: Group into Scenes; Artlist joins Epidemic Sound for music. Reliability: AI queues dedup, timelapse runs collapse to one job, no console-window flashing on Windows, API keys moved to the OS keychain, and the Windows build is Authenticode-signed.",
-  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v0.9.1-beta.6/CutValet-0.9.1-beta.6-mac.zip",
-  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v0.9.1-beta.6/CutValet-0.9.1-beta.6-win.zip",
-  "mac_sha256": "332bf13be467be42e17ca4f55fffac8c65e28165751814a2819d5a4a80c035ab",
-  "win_sha256": "5e14de891b12c15844daf15fd85ca796584e9efa16096cd1fedb2b2e227bf2c2"
+  "version": "1.0.0",
+  "notes": "Cut Valet 1.0 \u2014 the first public release.\n\n- Setup, radically simplified: one question (Files only / Everyday / Power) configures the whole AI stack, with an optional backup location step and API key row. Setup opens instantly.\n- Clip descriptions up to 3\u00d7 faster on the Fast tier, and you can now pick any model size per tier (2B\u201332B) with live download progress. Fixed a deadlock that could silently freeze all AI analysis.\n- Ingest you can trust: three clear progress bars (copying / backing up / placing in Resolve) with real counts and a green \"safe to close\" state. Resolve placement no longer slows down as big cards fill the bin.\n- Find a song: new \"Describe the vibe (AI)\" search \u2014 write what the scene feels like and it blends mood/genre/tempo results, fully locally.\n- YouTube upload polish (progress, scheduling calendar, draft round-trip) and scene-grouping fixes.\n- Windows: new signed per-user installer alongside the zip.",
+  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.0.0/CutValet-1.0.0-mac.zip",
+  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.0.0/CutValet-1.0.0-win.zip",
+  "mac_sha256": "b25fc62d98e957940df5283735bf0c4e47108248efad4458e5b7217f2c571254",
+  "win_sha256": "68bfd03f25a02e3227be209139be64a14f5add915ba1fdab0d5894a44452dc63"
 }
