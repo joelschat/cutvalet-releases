@@ -1,8 +1,8 @@
 {
-  "version": "1.0.0",
-  "notes": "Cut Valet 1.0 \u2014 the first public release.\n\n- Setup, radically simplified: one question (Files only / Everyday / Power) configures the whole AI stack, with an optional backup location step and API key row. Setup opens instantly.\n- Clip descriptions up to 3\u00d7 faster on the Fast tier, and you can now pick any model size per tier (2B\u201332B) with live download progress. Fixed a deadlock that could silently freeze all AI analysis.\n- Ingest you can trust: three clear progress bars (copying / backing up / placing in Resolve) with real counts and a green \"safe to close\" state. Resolve placement no longer slows down as big cards fill the bin.\n- Find a song: new \"Describe the vibe (AI)\" search \u2014 write what the scene feels like and it blends mood/genre/tempo results, fully locally.\n- YouTube upload polish (progress, scheduling calendar, draft round-trip) and scene-grouping fixes.\n- Windows: new signed per-user installer alongside the zip.",
-  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.0.0/CutValet-1.0.0-mac.zip",
-  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.0.0/CutValet-1.0.0-win.zip",
-  "mac_sha256": "b25fc62d98e957940df5283735bf0c4e47108248efad4458e5b7217f2c571254",
-  "win_sha256": "68bfd03f25a02e3227be209139be64a14f5add915ba1fdab0d5894a44452dc63"
+  "version": "1.0.1",
+  "notes": "Your setup profile now decides which tool tiles start enabled (nothing is removed \u2014 hidden tools stay in Manage tools). Index Archive Footage polished: the window can go behind the main window, shrinks back on collapse, and the describe queue's engine label tells the truth \u2014 failed describes stay pending. Editing fixes: Tag tool no longer freezes the app, project-only tools grey out without a project, Search & Import gains a search-scope picker, Triage card gets custom destinations + per-row Timeline checkbox, and YouTube metadata is grounded in vidIQ keyword data when connected.",
+  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.0.1/CutValet-1.0.1-mac.zip",
+  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.0.1/CutValet-1.0.1-win.zip",
+  "mac_sha256": "1c6dbda1a09679c3fb0decb935d9de59e14a1a814b1440f1398edcde53ca4159",
+  "win_sha256": "b2a56805bbe775f9f441404c4d1a534049fac03d0ebe03d9baeaf9a7b1d5d796"
 }
