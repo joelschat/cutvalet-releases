@@ -1,8 +1,8 @@
 {
   "version": "1.0.2",
-  "notes": "Clip metadata now actually lands on your Resolve clips \u2014 descriptions, tags, mood, shot type, speakers, alias, and analysis markers all sync, Resync backfills every already-synced clip (and skips unchanged ones), and the app offers a resync when analysis finishes. New: Rewalk timeline builds a fresh versioned time-of-day timeline with gyro-steady trims and markers on the clips \u2014 your original timeline is never touched. Timestamped transcripts: Copy transcript in the clip inspector and Export transcripts\u2026 in the YouTube tool produce readable [MM:SS] paragraphs. Rough Cut: 'Keep original tracks' replaces Preserve multicam, and the b-roll cap + stability-trim toggles moved into its dialog. Also: describes wait for the GPU instead of failing en masse, faster clip placement during ingest, the Open sidecar button works again, and backup/project tiles no longer show 0 clips after an ingest.",
+  "notes": "Camera name on the ingest window is now clickable - pick or add the right camera when auto-detection guesses wrong; DJI Mini 3 Pro auto-identifies. Upgrade-to-Rich correctly offers Fast-described clips again. Re-dropped footage with its .md sidecar keeps its analysis instead of re-running it. Plus: Resolve metadata/markers, Rewalk timeline, transcript export.",
   "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.0.2/CutValet-1.0.2-mac.zip",
   "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.0.2/CutValet-1.0.2-win.zip",
   "mac_sha256": "1e9555b4acad67f935a6a6e339e2f75167db79696f0ce11d807df0d8e00a840a",
-  "win_sha256": "5dbbbd224c9b7f38a45c2fd27fc0a0ee58babfa7dad0e0b45fa00cf25fbe266d"
+  "win_sha256": "68628370c12a823a58b30e5eed814026ac2121936e9bb6e01b989a6b72cb7ee9"
 }
