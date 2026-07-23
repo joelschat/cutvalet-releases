@@ -1,8 +1,8 @@
 {
-  "version": "1.0.1",
-  "notes": "Your setup profile now decides which tool tiles start enabled (nothing is removed \u2014 hidden tools stay in Manage tools). Index Archive Footage polished: the window can go behind the main window, shrinks back on collapse, and the describe queue's engine label tells the truth \u2014 failed describes stay pending. Editing fixes: Tag tool no longer freezes the app, project-only tools grey out without a project, Search & Import gains a search-scope picker, Triage card gets custom destinations + per-row Timeline checkbox, and YouTube metadata is grounded in vidIQ keyword data when connected.",
-  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.0.1/CutValet-1.0.1-mac.zip",
-  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.0.1/CutValet-1.0.1-win.zip",
-  "mac_sha256": "1c6dbda1a09679c3fb0decb935d9de59e14a1a814b1440f1398edcde53ca4159",
-  "win_sha256": "b2a56805bbe775f9f441404c4d1a534049fac03d0ebe03d9baeaf9a7b1d5d796"
+  "version": "1.0.2",
+  "notes": "Clip metadata now actually lands on your Resolve clips \u2014 descriptions, tags, mood, shot type, speakers, alias, and analysis markers all sync, Resync backfills every already-synced clip (and skips unchanged ones), and the app offers a resync when analysis finishes. New: Rewalk timeline builds a fresh versioned time-of-day timeline with gyro-steady trims and markers on the clips \u2014 your original timeline is never touched. Timestamped transcripts: Copy transcript in the clip inspector and Export transcripts\u2026 in the YouTube tool produce readable [MM:SS] paragraphs. Rough Cut: 'Keep original tracks' replaces Preserve multicam, and the b-roll cap + stability-trim toggles moved into its dialog. Also: describes wait for the GPU instead of failing en masse, faster clip placement during ingest, the Open sidecar button works again, and backup/project tiles no longer show 0 clips after an ingest.",
+  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.0.2/CutValet-1.0.2-mac.zip",
+  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.0.2/CutValet-1.0.2-win.zip",
+  "mac_sha256": "1e9555b4acad67f935a6a6e339e2f75167db79696f0ce11d807df0d8e00a840a",
+  "win_sha256": "5dbbbd224c9b7f38a45c2fd27fc0a0ee58babfa7dad0e0b45fa00cf25fbe266d"
 }
