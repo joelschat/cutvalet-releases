@@ -1,8 +1,8 @@
 {
-  "version": "1.0.4",
-  "notes": "Assistant Editor: gapless rough cuts, literal work orders with coverage receipts, smarter b-roll (visual beauty score, motion awareness), Format control for social cuts, graphics rendered and placed at build time. Graphics: place at playhead, arrows, bring-your-own TSX and assets. Search: instant indexed results, ~130x faster archive scan, all-words fallback. Resolve: colour-managed default timelines, ingest to open timeline, resync fixes. Reliability: fails loud on cloud-sync DB forks, folder presets follow drives.",
-  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.0.4/CutValet-1.0.4-mac.zip",
-  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.0.4/CutValet-1.0.4-win.zip",
-  "mac_sha256": "c6a3be31bf1653c22c4c4acd1d2e1a64805e329d5aa2b852b8065336423692de",
-  "win_sha256": "04221e99a952b6b12bd3322e80571a6892320869ffbfce315f148763b576b57e"
+  "version": "1.0.5",
+  "notes": "Graphics: the AI designs on purpose now \u2014 thinking time, it sees the video frame the graphic sits on, honoured fonts; Opus 5 replaces Haiku. Props are editable fields (including for imported/refined presets), plus a Copy prompt for writing importable .tsx with any LLM. Ingest & Resolve: stays on your timeline and page \u2014 no more bouncing. Archive Index: archive clips now analysed at full ingest quality (reset to re-analyse). Fix: no more resync offers for analysis that never ran.",
+  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.0.5/CutValet-1.0.5-mac.zip",
+  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.0.5/CutValet-1.0.5-win.zip",
+  "mac_sha256": "1687fd488887da0125899af98d8856c67c9025cc42d7a78aff46c8b94c1b955b",
+  "win_sha256": "0731c435486dcd07a398d6ccbf35e53be88b40afab812a1b53cfad1182335c65"
 }
