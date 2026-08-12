@@ -1,8 +1,8 @@
 {
-  "version": "1.1.3",
-  "notes": "Bigger MCP: your AI agent can now render graphics (key-free), find/place music & SFX, control colour and rendering, drive the full DaVinci Resolve API, read clip reports, and cut clip-by-clip \u2014 on your own AI subscription, no API key. New tool: Generate Proxies & Analyze for RED/Blackmagic/Canon RAW. Fixes: more reliable camera ID (unidentified clips now prompt; on Mac the metadata reader is now fully self-contained, so it keeps working on macOS versions that no longer ship Perl), sturdier Resolve connection (ignores stray fusionscript copies), local-AI honesty in chat/graphics, automatic cleanup of duplicate footage rows. Note: existing projects are repaired on first launch \u2014 restart once after updating, one machine at a time; macOS may prompt for footage-folder access on first launch (click Allow).",
-  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.3/CutValet-1.1.3-mac.zip",
-  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.3/CutValet-1.1.3-win.zip",
-  "mac_sha256": "d643804a6e10090643f6f92f09284ff8c5859f2800f5c40445c7bd7b605821f0",
-  "win_sha256": "a15a760dafdf47a5eb500e4cc5e14cc86d52184e1a071266f87a236ae74677a0"
+  "version": "1.1.4",
+  "notes": "DaVinci Resolve connects more reliably on machines with a custom Python setup: stray PYTHONHOME/PYTHONPATH variables (common with Anaconda or a developer Python) could point Resolve's scripting library at the wrong interpreter and block the connection on launch \u2014 Cut Valet now clears those for its own connection. And when a connection still fails, one Send Diagnostics report now names the cause: whether Resolve's library loads at all on your machine, your Visual C++ runtime version, and any stray Python environment \u2014 no more back-and-forth.",
+  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.4/CutValet-1.1.4-mac.zip",
+  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.4/CutValet-1.1.4-win.zip",
+  "mac_sha256": "9fcdb04312e554ec7a9e7a4fe8d5366fbbc75c6f580eb1125d47f76a3637e5ea",
+  "win_sha256": "7882d76b16a45062179d7d6d1ccd8055af19c9abbac97f4d5f2f01adf30baf1c"
 }
