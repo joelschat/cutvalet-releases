@@ -1,8 +1,8 @@
 {
-  "version": "1.1.4",
-  "notes": "DaVinci Resolve connects more reliably on machines with a custom Python setup: stray PYTHONHOME/PYTHONPATH variables (common with Anaconda or a developer Python) could point Resolve's scripting library at the wrong interpreter and block the connection on launch \u2014 Cut Valet now clears those for its own connection. And when a connection still fails, one Send Diagnostics report now names the cause: whether Resolve's library loads at all on your machine, your Visual C++ runtime version, and any stray Python environment \u2014 no more back-and-forth.",
-  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.4/CutValet-1.1.4-mac.zip",
-  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.4/CutValet-1.1.4-win.zip",
-  "mac_sha256": "9fcdb04312e554ec7a9e7a4fe8d5366fbbc75c6f580eb1125d47f76a3637e5ea",
-  "win_sha256": "7882d76b16a45062179d7d6d1ccd8055af19c9abbac97f4d5f2f01adf30baf1c"
+  "version": "1.1.5",
+  "notes": "Resolve connection fixed on Windows (the big one), clips survive folder renames, ShotPut-style offload reports with MHL, settings search, PAL frame rates, Perplexity support, notarized mac builds, and a long list of reliability fixes.",
+  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.5/CutValet-1.1.5-mac.zip",
+  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.5/CutValet-1.1.5-win.zip",
+  "mac_sha256": "41a3c1f861d4c65913b3ac357a37f1d2a6a61951ac45303530569320c0316832",
+  "win_sha256": "4a11a8f0819073072b812a0b1f0e571fb7fe0ac7b8535c702d8cc5ac52a0127f"
 }
