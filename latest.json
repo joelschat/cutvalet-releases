@@ -1,8 +1,8 @@
 {
-  "version": "1.1.61",
-  "notes": "Hotfix: Fast tier is cleanly Moondream-only (with the download now optional for Rich-only setups), graphics drafting fixes, quieter single-instance guard.",
-  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.61/CutValet-1.1.61-mac.zip",
-  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.61/CutValet-1.1.61-win.zip",
-  "mac_sha256": "55f9bad245be8aeb2a2dfd2d78ad788adad7bc0f339b7470829d4792efc439a6",
-  "win_sha256": "2020c7e1780b0d19bd4307b46dd74fba6159bf733cc2187859cb3e3b9a0e40ec"
+  "version": "1.1.62",
+  "notes": "Cut Valet 1.1.62 - 2026-08-16\n\nFixes\n- Fixed a crash on quit while a slate scan was still running (the recurring\n  shutdown abort - reported in a mac diagnostics bundle, seen x2).\n- Model Storage Location is honest now: downloading models right after\n  picking a new location warns you to restart first instead of silently\n  putting them back on the system drive - and the Private AI engine\n  (Ollama) now follows your chosen location too.\n- The Metadata progress bar reaches 100% when the work is actually done -\n  photos and adopted clips no longer hold it at ~90% forever.\n\nTools\n- MCP: copying the connect command now turns the server on, with live\n  status shown in the agent box.",
+  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.62/CutValet-1.1.62-mac.zip",
+  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.62/CutValet-1.1.62-win.zip",
+  "mac_sha256": "d9e0c89867715d88669f1244e4f60fd4ef3df1fe3a9fbb657512426338a61f02",
+  "win_sha256": "e99325461ca0826d01df4ab27a6858afb77ce3157cfb638d9b33a626b38f3661"
 }
