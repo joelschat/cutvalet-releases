@@ -1,8 +1,8 @@
 {
-  "version": "1.1.6",
-  "notes": "Big stability release: choose where AI models are stored, temp-file leak fixed, every window fits small screens, quit-while-busy crash eliminated, slate scan gains a Stop button, one instance per machine, plus seven tester-reported fixes and a copy that can never hang forever.",
-  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.6/CutValet-1.1.6-mac.zip",
-  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.6/CutValet-1.1.6-win.zip",
-  "mac_sha256": "2a4d768d99bce99aca120a97d880d22fe396b581581b05c8f25adf583aa6917d",
-  "win_sha256": "b85ec3cdd531af77f93e372e3e74316516d18c51d44d3a068745625f1ceb4ed0"
+  "version": "1.1.61",
+  "notes": "Hotfix: Fast tier is cleanly Moondream-only (with the download now optional for Rich-only setups), graphics drafting fixes, quieter single-instance guard.",
+  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.61/CutValet-1.1.61-mac.zip",
+  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.61/CutValet-1.1.61-win.zip",
+  "mac_sha256": "55f9bad245be8aeb2a2dfd2d78ad788adad7bc0f339b7470829d4792efc439a6",
+  "win_sha256": "2020c7e1780b0d19bd4307b46dd74fba6159bf733cc2187859cb3e3b9a0e40ec"
 }
