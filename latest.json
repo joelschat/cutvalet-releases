@@ -1,6 +1,6 @@
 {
   "version": "1.1.62",
-  "notes": "Cut Valet 1.1.62 - 2026-08-16\n\nFixes\n- Fixed a crash on quit while a slate scan was still running (the recurring\n  shutdown abort - reported in a mac diagnostics bundle, seen x2).\n- Model Storage Location is honest now: downloading models right after\n  picking a new location warns you to restart first instead of silently\n  putting them back on the system drive - and the Private AI engine\n  (Ollama) now follows your chosen location too.\n- The Metadata progress bar reaches 100% when the work is actually done -\n  photos and adopted clips no longer hold it at ~90% forever.\n\nTools\n- MCP: copying the connect command now turns the server on, with live\n  status shown in the agent box.",
+  "notes": "Setup and stability: copying the MCP connect command now turns the server on, the Fast tier is cleanly Moondream-only, model storage location covers same-session downloads and Ollama, quitting is crash-proof from tool windows, and progress bars reach 100% honestly.",
   "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.62/CutValet-1.1.62-mac.zip",
   "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.62/CutValet-1.1.62-win.zip",
   "mac_sha256": "d9e0c89867715d88669f1244e4f60fd4ef3df1fe3a9fbb657512426338a61f02",
