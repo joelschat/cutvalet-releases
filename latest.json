@@ -1,8 +1,8 @@
 {
-  "version": "1.1.62",
-  "notes": "Setup and stability: copying the MCP connect command now turns the server on, the Fast tier is cleanly Moondream-only, model storage location covers same-session downloads and Ollama, quitting is crash-proof from tool windows, and progress bars reach 100% honestly.",
-  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.62/CutValet-1.1.62-mac.zip",
-  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.62/CutValet-1.1.62-win.zip",
-  "mac_sha256": "d9e0c89867715d88669f1244e4f60fd4ef3df1fe3a9fbb657512426338a61f02",
-  "win_sha256": "e99325461ca0826d01df4ab27a6858afb77ce3157cfb638d9b33a626b38f3661"
+  "version": "1.1.70",
+  "notes": "Camera RAW everywhere: BRAW, RED R3D and Nikon N-RAW decode natively on BOTH platforms \u2014 thumbnails, scrubbing, transcription and AI analysis with no Resolve proxies. Proxies now travel with their source clip instead of importing separately. Metadata stage heals stuck clips on Rescan. Hard database lease stops two machines forking a Dropbox-synced library. Audio-sync tunables in Settings; longer toasts; sidecars safe under concurrent analysis.",
+  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.70/CutValet-1.1.70-mac.zip",
+  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.70/CutValet-1.1.70-win.zip",
+  "mac_sha256": "eaed82cbb1125c250a3969c9c7b3d45abe9fb9440353aac8ff3f3c219e0fa5b0",
+  "win_sha256": "cec92a6bfd1f59fe47b0c8da7f6da3b5df32e567fe4128d59af9f340a2cd615d"
 }
