@@ -1,8 +1,8 @@
 {
-  "version": "1.1.73",
-  "notes": "New: TOD Sync, a tool that shows what the automatic time-of-day sync did and why. New: switches to stop Cut Valet touching your Resolve project, a chosen truth-axis camera, and a sync scope cap. Frame rates: Cut Valet now warns when your footage and timeline rates disagree, and cuts land where they were planned on mismatched-rate footage. Time Sync is now Timecode Slate. A usage-data opt-out that actually stops the bytes. Fixes: resyncing with the wrong Resolve project open is one instruction instead of 86 errors; a backup drive that refuses writes says so once and how to fix it; three Settings actions and Apple Silicon describing no longer crash; clips are no longer imported twice; and a long list of truthful-reporting fixes.",
-  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.73/CutValet-1.1.73-mac.zip",
-  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.73/CutValet-1.1.73-win.zip",
-  "mac_sha256": "af95176ae8a1c8b6397ce3c07dcbc66fdf2dbda2db5384df8aba07455897682a",
-  "win_sha256": "ecf51bb5e8f0bfc9140310a5ba1464e3fe4619a661e4d297f3978041ac6b5e70"
+  "version": "1.1.74",
+  "notes": "Fixed: 'Check for updates now' updates the app itself again - it used to send you to a browser download (including the retry link after a failed update); downloads are verified against the release checksum. Fixed: dialogs and logs no longer point at a 'TIMECODE' timeline that doesn't exist - clips go to the day's time-of-day timeline (naming only, placement unchanged).",
+  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.74/CutValet-1.1.74-mac.zip",
+  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.74/CutValet-1.1.74-win.zip",
+  "mac_sha256": "aad80c6a8e1443da6e06f646ecd0e4f37e8acb232dfcd2312903b40107570bd9",
+  "win_sha256": "bfc164fc461f121b1285cd944708bf96fb2862b82f0ed7e1b7b29d488b8484a4"
 }
