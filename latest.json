@@ -1,8 +1,8 @@
 {
-  "version": "1.1.74",
-  "notes": "Fixed: 'Check for updates now' updates the app itself again - it used to send you to a browser download (including the retry link after a failed update); downloads are verified against the release checksum. Fixed: dialogs and logs no longer point at a 'TIMECODE' timeline that doesn't exist - clips go to the day's time-of-day timeline (naming only, placement unchanged).",
-  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.74/CutValet-1.1.74-mac.zip",
-  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.74/CutValet-1.1.74-win.zip",
-  "mac_sha256": "aad80c6a8e1443da6e06f646ecd0e4f37e8acb232dfcd2312903b40107570bd9",
-  "win_sha256": "bfc164fc461f121b1285cd944708bf96fb2862b82f0ed7e1b7b29d488b8484a4"
+  "version": "1.1.75",
+  "notes": "Fixed: clips keep the real time of day they were shot (Sony local timestamp, camera UTC offset applied). Fixed: on macOS 26 the metadata reader silently produced nothing, so clips arrived with no clock \u2014 the build now refuses to ship a broken reader and the app warns on launch. Resync now counts and explains clockless clips, and tells you when the Resolve project was never created. Media Pool scan places adopted clips by real time of day. Windows: no more console windows stealing focus during RAW analysis. macOS: no crash after an archive index run. Diagnostics bundles now include the Rich-description log.",
+  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.75/CutValet-1.1.75-mac.zip",
+  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.75/CutValet-1.1.75-win.zip",
+  "mac_sha256": "fbb3630c8e22056b71728bcd8661b63db2f6651f67a69e0d1dedb090d65ee8d9",
+  "win_sha256": "55bb4d8372b84320d9999b5d0a28f4863eeba6a2e2f04b43d61b35ba36844955"
 }
