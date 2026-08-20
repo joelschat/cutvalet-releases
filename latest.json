@@ -1,8 +1,9 @@
 {
-  "version": "1.1.75",
-  "notes": "Fixed: clips keep the real time of day they were shot (Sony local timestamp, camera UTC offset applied). Fixed: on macOS 26 the metadata reader silently produced nothing, so clips arrived with no clock \u2014 the build now refuses to ship a broken reader and the app warns on launch. Resync now counts and explains clockless clips, and tells you when the Resolve project was never created. Media Pool scan places adopted clips by real time of day. Windows: no more console windows stealing focus during RAW analysis. macOS: no crash after an archive index run. Diagnostics bundles now include the Rich-description log.",
-  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.75/CutValet-1.1.75-mac.zip",
-  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.75/CutValet-1.1.75-win.zip",
-  "mac_sha256": "fbb3630c8e22056b71728bcd8661b63db2f6651f67a69e0d1dedb090d65ee8d9",
-  "win_sha256": "55bb4d8372b84320d9999b5d0a28f4863eeba6a2e2f04b43d61b35ba36844955"
+  "version": "1.1.76",
+  "notes": "Fixed\n- Auto-update now verifies the app actually reopened, reports a blocked relaunch as a failure, and carries the helper's log into the app log.\n- Windows: updating keeps your uninstaller (no more orphaned Apps entry or stacked installs).\n- \"Download manually...\" now gives Windows users the setup installer, not the updater's zip.\n- Rich descriptions no longer reload and re-probe the model on every clip; unparseable output now counts against a model.\n- iPhone HEIC photos get thumbnails again, so they are described and enter visual search.\n- A stalled AI stage no longer reads as a finished one: it says how many clips are held and why, and diagnostics bundles carry a new \"AI stages\" section.\n- The first-run wizard opens at the size of its own text, scrolls, and no longer paints hints over the controls.\n- New Project shows the whole folder path.\n- Folder names keep their dots, so \"Drehtag_20.08.26\" stays intact.\n- The Advanced toggle is remembered between launches.\n- Choosing Cloud API sticks even before you paste the key.\n\nAdded\n- A project remembers the preset it was created under and re-applies it when you switch back: folder structure, colour, Fairlight, auto-cut and the default AI toggles. Opt-in per project.",
+  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.76/CutValet-1.1.76-mac.zip",
+  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.76/CutValet-1.1.76-win.zip",
+  "mac_sha256": "d10df72d25cd06adec8af63eae90990f62e87d6100d09aac164de985434d5904",
+  "win_sha256": "a631c95e04348477b9900cc3cebb6b4f85a28dccf85d9a933cee79c6474b39a0",
+  "win_installer_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.1.76/CutValet-1.1.76-win-setup.exe"
 }
