@@ -1,0 +1,8 @@
+{
+  "version": "1.3.2",
+  "notes": "Preview 1.3.2: the build that exercises the new installer-driven Update & Restart. A hand-edited settings.json with a byte-order mark no longer resets the app.",
+  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.3.2/CutValet-1.3.2-win.zip",
+  "win_installer_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.3.2/CutValet-1.3.2-win-setup.exe",
+  "win_sha256": "a4f65334699b820d6c4f43ad049f74caaf57d8a5ca7888141994ae7d64bd5fa2",
+  "win_installer_sha256": "a7b2ea819c3fbf14369c7ed84fd05aa12f885b4cb76a8a8e2555f77c4977cad2"
+}
