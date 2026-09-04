@@ -1,11 +1,11 @@
 {
-  "version": "1.3.0",
-  "notes": "Cut Valet 1.3.0 \u2014 the big one. Highlights:\n\n- One window: Library, Edit, Deliver, Archive and Settings tabs on one bar; over 170 pop-up dialogs became in-window sheets and notices; Settings is one searchable rail; tools open in the working pane.\n- Queue tray: Queue, Activity, Chat and Suggestions in one column; lane verbs (skip, pause, send to back); \"Hand it to Resolve\" stops everything in under a second; Wait for off hours.\n- Ingest: a five-stop dial (Auto, Copy only, Words, Words + vision, Every signal) shared by cards, drops, watch folders and the archive; the Media well fills as the copy runs; the day copied in shot order; production sound as its own lane.\n- Drop import can leave files where they are, match a drop to a camera on record, and handle several cameras in one drop.\n- Multicam: clips on a common clock or matched by sound become a take; Sync by sound (was Match audio) shows the alignment on waveform lanes; Find by sound matches takes of one song by waveform alone; takes can be ungrouped and undone.\n- Frame ledger: one decode per clip; ten log profiles corrected from the vendors' own maths (S-Log, C-Log, N-Log, V-Log, F-Log, D-Log, Protune, LogC).\n- People is a tool: faces ride the describe pass, readable previews, reversible merges, names reach search and sidecars.\n- Brain and providers: one app-wide brain pill; Fable 5.1 and Opus 5; OpenRouter; Accounts cards with spend and a monthly cap; first-class Ollama with a local default set.\n- Chat tab is a real assistant: same tool loop as MCP, per-project threads, streaming with Stop, voice input.\n- Timelines are documents first (.otio), sent to Resolve as one batch; strip filmstrips, waveforms and keyboard zoom; AI Cut Planner with honest auto-cut; MCP document, bin and ingest tools.\n- Deliver is a to-do list with editable export presets, Resolve's timeline picker, and Thumbnail Lab rebuilt.\n- Archive: one search over everything ever shot, rescan follows moved files, indexing speed dial.\n- Reliability: Whisper on Apple GPUs in a child process (no more CPU pin), dead-GPU stand-down, OCR at the gate, Qwen partial coverage is not success, AppleDouble forks are not clips, quit waits for the queues, sidecars v3.\n- Setup wizard is one question per step with a receipt; twelve-card first-run tour; update screen on arrival; Marketplace with install and uninstall.\n\nFull detail in CHANGELOG.md. Known limitations: D-Log M is approximated with plain D-Log; Social Distribute is not ready (Soon badge); 120 fps projects play back at 24 in Resolve's Edit page.",
-  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.3.0/CutValet-1.3.0-mac.zip",
-  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.3.0/CutValet-1.3.0-win.zip",
-  "mac_sha256": "ad477a4405dd2335133d5e543289f0ba751a7cce89bafbe571f68034a96ea781",
-  "win_sha256": "5877bf33245a9be3ccc10554584b34d5c005c5322736560bf27d27ceef816fdb",
-  "win_installer_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.3.0/CutValet-1.3.0-win-setup.exe",
+  "version": "1.3.3",
+  "notes": "Cut Valet 1.3.3\n- Cut Valet 1.3.0 rebuilt the app: one window, five tabs, a real Library, timelines as OTIO documents, multicam as a project fact.\n- Update & Restart on Windows runs the signed installer now, so this is the last update you do by hand. If a blank window appears during this one, leave it alone.\n- Text size follows Windows, the version shows in Help & Support, and a handful of crash and recovery fixes.",
+  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.3.3/CutValet-1.3.3-mac.zip",
+  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.3.3/CutValet-1.3.3-win.zip",
+  "mac_sha256": "be3189b627387121ae78eb11f652715fa83fc1c7c2505160221bcd93acc1ba40",
+  "win_sha256": "efb25b4f32c57d5d297c8417933c599c6b8af03479e9616a74631f2d1d54eef1",
+  "win_installer_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.3.3/CutValet-1.3.3-win-setup.exe",
   "moved": [
     [
       "Archive Manager",
@@ -29,5 +29,6 @@
     "Tech stack, which scans this computer and tunes itself.",
     "Ingest is a page, so several cards can land at once.",
     "The assistant says what it knows, and every line has a switch."
-  ]
+  ],
+  "win_installer_sha256": "37134640da1b34278fcaeb5dba7bc443f22ebe9bb4bd414346b81b82fd15624b"
 }
