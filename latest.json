@@ -1,11 +1,11 @@
 {
-  "version": "1.3.3",
-  "notes": "Cut Valet 1.3.3\n- Cut Valet 1.3.0 rebuilt the app: one window, five tabs, a real Library, timelines as OTIO documents, multicam as a project fact.\n- Update & Restart on Windows runs the signed installer now, so this is the last update you do by hand. If a blank window appears during this one, leave it alone.\n- Text size follows Windows, the version shows in Help & Support, and a handful of crash and recovery fixes.",
-  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.3.3/CutValet-1.3.3-mac.zip",
-  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.3.3/CutValet-1.3.3-win.zip",
-  "mac_sha256": "be3189b627387121ae78eb11f652715fa83fc1c7c2505160221bcd93acc1ba40",
-  "win_sha256": "efb25b4f32c57d5d297c8417933c599c6b8af03479e9616a74631f2d1d54eef1",
-  "win_installer_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.3.3/CutValet-1.3.3-win-setup.exe",
+  "version": "1.3.4",
+  "notes": "Cut Valet 1.3.4 \u2014 faster, and a long list of things that no longer hang\n\n- Opening a project no longer freezes the window; open-project is well under a second on a 3,000-clip project.\n- Launch is about a second faster; header pills never wait on Ollama from the window thread.\n- Resync creates the Resolve project if you made the project while Resolve was closed, and switches to it if another is open.\n- Search & Import places onto a track that exists and no longer refuses every clip at the same frame.\n- Update & Restart survives a space in your Windows user name; \"Check for Updates\" works with automatic checks off; Windows has a Quit line.\n- Crash recovery: Resume no longer hangs on a checksum mismatch; read-only camera clips re-copy cleanly; a cancelled drag-and-drop import leaves no \"unfinished\" session.\n- Multi-mic clips get all their audio tracks; a hand-made 01:00:00:00 time-of-day timeline is moved to midnight.\n- Settings: every control round-trips; the wizard starts from your current values.\n- Transcripts: short speechless clips no longer show a hallucinated \"Thank you.\"\n- Diagnostics: crash.log session headers, faulting module on Windows, memory snapshot on Mac, every MCP connection attempt logged.\n- A local model whose prompt was cut short is a failed step with the reason, not a poor plan.",
+  "mac_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.3.4/CutValet-1.3.4-mac.zip",
+  "win_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.3.4/CutValet-1.3.4-win.zip",
+  "mac_sha256": "517a29e64d8d2309f3b123ee13de77971d1f28a7ea206110599cc95c4c156d4a",
+  "win_sha256": "06af8883ef8c8d3887b1b2737b09ff7183163687aa384503133682a5890096fd",
+  "win_installer_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.3.4/CutValet-1.3.4-win-setup.exe",
   "moved": [
     [
       "Archive Manager",
@@ -30,5 +30,5 @@
     "Ingest is a page, so several cards can land at once.",
     "The assistant says what it knows, and every line has a switch."
   ],
-  "win_installer_sha256": "37134640da1b34278fcaeb5dba7bc443f22ebe9bb4bd414346b81b82fd15624b"
+  "win_installer_sha256": "33e9ae4b49bfa0e781f397f95abefa52867776647b67a7940e2c0e90286d5c83"
 }
