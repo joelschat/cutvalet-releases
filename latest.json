@@ -6,29 +6,31 @@
   "mac_sha256": "2fb332b80a29964839ea448c56e13a82754411886a0594ab87ef15722348a082",
   "win_sha256": "2346da1ccda615bd5677172fb7500e93c528efdd84d5466ed38918fb26000de1",
   "win_installer_url": "https://github.com/joelschat/cutvalet-releases/releases/download/v1.3.18/CutValet-1.3.18-win-setup.exe",
+  "win_installer_sha256": "3706459fb5d538dc3fef630445a534c4d0f3def52eeb5aaf391772f9e660177e",
   "moved": [
     [
-      "Archive Manager",
-      "the Archive tab"
+      "Build a Rough Cut",
+      "the Timeline Builder"
     ],
     [
-      "Processing queue",
-      "Valet, on the right"
+      "AI Cut Planner",
+      "The Assistant Chat in the right panel"
     ],
     [
-      "Tool windows",
-      "the main window"
+      "Sync by sound",
+      "the Sync workspace (Timelines > Sync...)"
     ],
     [
-      "Deliver tool",
-      "the Deliver tab"
+      "Add to Resolve (Catalog)",
+      "Add N to <project>, which also fills the Media Pool"
+    ],
+    [
+      "Auto mode (under Analysis)",
+      "its own Settings page"
     ]
   ],
   "added": [
-    "Time of day sync, for lining up a whole day of cameras.",
-    "Tech stack, which scans this computer and tunes itself.",
-    "Ingest is a page, so several cards can land at once.",
-    "The assistant says what it knows, and every line has a switch."
-  ],
-  "win_installer_sha256": "3706459fb5d538dc3fef630445a534c4d0f3def52eeb5aaf391772f9e660177e"
+    "Index an archive starts at once and lists every clip before reading it.",
+    "The Catalog folds timelapses, filters by Kind and File type, and drags clips onto lanes."
+  ]
 }
