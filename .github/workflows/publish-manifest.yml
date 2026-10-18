@@ -1,0 +1,125 @@
+# Publish latest.json (the in-app update manifest) once a release is complete.
+#
+# Lives in joelschat/cutvalet-releases. The master copy is in the DVEA repo at
+# deploy/cutvalet-releases/.github/workflows/publish-manifest.yml; copy it,
+# scripts/publish_manifest.py and scripts/update_manifest.py across together.
+#
+# What it does: takes the NEWEST non-draft, non-prerelease release (by version),
+# waits until CutValet-<V>-win.zip, CutValet-<V>-mac.zip and
+# CutValet-<V>-win-setup.exe are all uploaded with GitHub's sha256 digest,
+# regenerates latest.json with the same scripts/update_manifest.py the ship
+# skills use, and commits it to main (GitHub Pages serves main /). It never
+# moves the manifest to an older version; the same version is regenerated so a
+# re-uploaded zip's new hash, or an edited release body (the notes), lands.
+#
+# Why three triggers: "published" fires when a ship skill undrafts the release
+# (it does that once both platform zips are up), "edited" fires when the notes
+# are edited, and nothing fires when an asset is uploaded or re-uploaded, so
+# the schedule picks those up within 30 minutes. workflow_dispatch is for a
+# manual run, with an optional dry run that only prints the change.
+#
+# Permissions: the job's own GITHUB_TOKEN (contents: write to commit
+# latest.json, pages: write to ask Pages for a rebuild). No other secret.
+#
+# Failure modes, all visible as a failed or annotated run:
+#   - an asset missing or not yet hashed: the run succeeds and says "wait";
+#     the next trigger tries again. Nothing is written.
+#   - the release is older than the live manifest: "skip", nothing written.
+#   - a malformed moves block in the release body: "wait" with the reason.
+#   - the push to main is rejected (someone pushed meanwhile): the run refetches
+#     main, regenerates and retries up to three times, then fails.
+#   - Pages does not show the new version within ~5 minutes: a warning
+#     annotation (the commit is in; Pages or its cache is just slow).
+
+name: Publish manifest
+
+on:
+  release:
+    types: [published, edited]
+  schedule:
+    - cron: "7,37 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Only show what would change in latest.json"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: publish-manifest
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && 'true' || 'false' }}
+    steps:
+      # A release event checks out the release TAG by default, which in this
+      # repo is whatever main was when the tag was made. Always work on main.
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Regenerate latest.json and push it
+        id: publish
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            gh api "repos/$REPO/releases?per_page=30" > "$RUNNER_TEMP/releases.json"
+            args=(--releases "$RUNNER_TEMP/releases.json" --manifest latest.json)
+            if [ "$DRY_RUN" = "true" ]; then args+=(--dry-run); fi
+            : > "$RUNNER_TEMP/out.txt"
+            GITHUB_OUTPUT="$RUNNER_TEMP/out.txt" python3 scripts/publish_manifest.py "${args[@]}"
+            cat "$RUNNER_TEMP/out.txt" >> "$GITHUB_OUTPUT"
+            changed=$(sed -n 's/^changed=//p' "$RUNNER_TEMP/out.txt" | tail -1)
+            version=$(sed -n 's/^version=//p' "$RUNNER_TEMP/out.txt" | tail -1)
+            if [ "$changed" != "true" ]; then
+              echo "Nothing to commit."
+              exit 0
+            fi
+            git add latest.json
+            git commit -m "Publish manifest for $version" -m "Written by the publish-manifest workflow from release v$version."
+            if git push origin HEAD:main; then
+              echo "pushed=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "::notice::push rejected (attempt $attempt); refetching main and regenerating"
+            git fetch origin main
+            git reset --hard origin/main
+          done
+          echo "::error::could not push latest.json after 3 attempts"
+          exit 1
+
+      # Pushes made with GITHUB_TOKEN may not start a Pages build on their
+      # own; asking costs nothing when one is already queued.
+      - name: Ask Pages to rebuild
+        if: steps.publish.outputs.pushed == 'true'
+        continue-on-error: true
+        run: gh api -X POST "repos/$REPO/pages/builds" --silent
+
+      - name: Check the live manifest
+        if: steps.publish.outputs.pushed == 'true'
+        shell: bash
+        env:
+          VERSION: ${{ steps.publish.outputs.version }}
+        run: |
+          owner="${REPO%%/*}"; name="${REPO##*/}"
+          url="https://${owner,,}.github.io/${name}/latest.json"
+          for i in $(seq 20); do
+            live=$(curl -fsS "$url?t=$(date +%s)" | python3 -c "import sys,json;print(json.load(sys.stdin).get('version',''))" || true)
+            if [ "$live" = "$VERSION" ]; then echo "MANIFEST LIVE: $VERSION"; exit 0; fi
+            sleep 15
+          done
+          echo "::warning::latest.json is committed but $url still says '${live:-?}' after 5 minutes (Pages build or cache); check the Pages deployment."
